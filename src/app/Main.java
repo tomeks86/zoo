@@ -1,8 +1,11 @@
 package app;
 
+import app.tools.AnimalFactory;
 import com.zoo.animals.Animal;
 import com.zoo.animals.Tiger;
 import com.zoo.animals.rare.WhiteTiger;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args){
@@ -13,6 +16,14 @@ public class Main {
         ((WhiteTiger) myTiger).fart();
         System.out.println(myTiger.toString());
         System.out.println(mySecondTiger.toString());
+
+        List<Animal> animalList = AnimalFactory.getAnimals();
+
+        for (int i = 0; i < animalList.size(); i++) {
+            System.out.println(animalList.get(i).getClass().getCanonicalName() + " (zwierze) " + (i + 1) + ": " + animalList.get(i).getName());
+        }
+
+        animalList.get(3).eat();
         //Tiger myTiger = new Tiger("Franciszek", 20);
         //Tiger myTiger = new Tiger(80);
         //Tiger myTiger = new Tiger();

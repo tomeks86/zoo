@@ -21,6 +21,11 @@ public class Animal {
         //System.out.println("hello from Animal(hungerLevel) constructor");
     }
 
+    public Animal(String name, Integer hungerLevel) {
+        this.name = name;
+        this.hungerLevel = hungerLevel;
+    }
+
     public String getColor() {
         return color;
     }
