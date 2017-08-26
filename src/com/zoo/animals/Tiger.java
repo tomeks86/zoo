@@ -33,6 +33,12 @@ public class Tiger extends Animal {
         System.out.println("Awrrr!");
     }
 
+    @Override
+    public void eat() {
+        super.eat();
+        System.out.println("Tiger is eating, be warned!");
+    }
+
     //@Override
     //public String toString() {
     //    //return super.toString();

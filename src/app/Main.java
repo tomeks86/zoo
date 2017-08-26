@@ -23,7 +23,7 @@ public class Main {
             System.out.println(animalList.get(i).getClass().getCanonicalName() + " (zwierze) " + (i + 1) + ": " + animalList.get(i).getName());
         }
 
-        animalList.get(3).eat();
+        ((WhiteTiger) animalList.get(0)).eat("some shit");
         //Tiger myTiger = new Tiger("Franciszek", 20);
         //Tiger myTiger = new Tiger(80);
         //Tiger myTiger = new Tiger();

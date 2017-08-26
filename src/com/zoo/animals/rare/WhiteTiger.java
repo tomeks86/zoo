@@ -29,4 +29,11 @@ public class WhiteTiger extends Tiger {
         //return super.toString();
         return "I'm an animal and my name is " + super.getName() + "!";
     }
+
+    //@Override
+    public void eat(String food) {
+        //public void eat() {
+        super.eat();
+        System.out.println("White tiger is eating " + food + "; extreme danger!");
+    }
 }
