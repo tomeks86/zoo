@@ -20,6 +20,7 @@ public class AnimalFactory {
         animals.add(new Snake("Stefanek", 32));
         animals.add(new Elephant("Jasio", 32));
         animals.add(new Tiger("Henio", 15));
+        animals.add(new Snake("Ziutek", 15));
 
         return animals;
     }
