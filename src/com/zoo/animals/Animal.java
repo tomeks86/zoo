@@ -1,10 +1,13 @@
 package com.zoo.animals;
 
+import com.zoo.infrastructure.Building;
+
 public class Animal {
     private String color;
     private Integer legCount;
     private Float weight;
     private String name = "unnamed animal";
+    private Building building;
 
     public Integer getHungerLevel() {
         return hungerLevel;
@@ -86,5 +89,13 @@ public class Animal {
     public String toString() {
         //return super.toString();
         return "I'm an animal and my name is " + name + "!";
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
+
+    public Building getBuilding() {
+        return building;
     }
 }

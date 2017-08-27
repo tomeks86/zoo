@@ -47,6 +47,9 @@ public class Main {
         System.out.println(smallAnimalsBuilding.getAnimalTypes());
         System.out.println("");
 
+        smallAnimalsBuilding.getAnimalIndex("Ziutek");
+        bigAnimalsBuilding.getAnimalIndex("Ziutek");
+
         //System.out.println("");
         //String a = "abc";
         //String b = "abcd";

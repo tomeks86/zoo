@@ -21,6 +21,7 @@ public class Building {
 
     public void addAnimal(Animal animal) {
         animals.add(animal);
+        animal.setBuilding(this);
         System.out.println("Animal added to building: " + name);
     }
 
@@ -32,6 +33,37 @@ public class Building {
         String result = "";
         for (Animal animal : animals) {
             result = result + animal.getClass().getCanonicalName() + "\n";
+        }
+        return result;
+    }
+
+    public ArrayList<String> getanimalNames() {
+        ArrayList<String> animalNames = new ArrayList<>();
+        for (Animal animal : animals) {
+            animalNames.add(animal.getName());
+        }
+        return animalNames;
+    }
+
+    public Integer getAnimalIndex(String name) {
+        ArrayList<String> names = this.getanimalNames();
+        Integer animalIndex = names.indexOf(name);
+        System.out.println(animals.get(0).getName());
+        if (animalIndex > -1) {
+            System.out.println("animal " + name + " found in cage " + (animalIndex + 1) + "!");
+        } else {
+            System.out.println("animal " + name + " was not found in this (" + this.getName() + ") building!");
+        }
+        return animalIndex;
+    }
+
+    public Animal getAnimalByName(String name) {
+        Animal result = null;
+        for (Animal animal : animals) {
+            if (animal.getName().equals(name)) {
+                result = animal;
+                break;
+            }
         }
         return result;
     }
